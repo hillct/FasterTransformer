@@ -13,7 +13,7 @@
 # limitations under the License.
 
 add_executable(bert_example bert_example.cc)
-target_link_libraries(bert_example PUBLIC -lcublas -lcublasLt -lcudart nvtx_utils Bert)
+target_link_libraries(bert_example PUBLIC -lmpi_cxx -lmpi -lcublas -lcublasLt -lcudart nvtx_utils Bert)
 if (SPARSITY_SUPPORT)
 target_link_libraries(bert_example PUBLIC -lcusparse -lcusparseLt)
 endif()
